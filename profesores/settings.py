@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'localizacion',
+    'escuelas',
 
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
