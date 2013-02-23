@@ -1,0 +1,97 @@
+        	 {% extends 'base_index.html' %}
+        	 {% block title %} Bienbenido a la pagina de logueo {% endblock %}
+        	 {% block contenedorPrincipalHead %}
+        		<div class="sectionConted" >
+        			
+        			{% block logotipoHead %} 
+        			<div class="logoHeadBody">
+        			dede
+        			</div>
+        			{% endblock logotipoHead %}
+        			
+        			{% block menuRightHead %} 
+        			<div class="loginHeadBody">
+        				<form name="iniciarSesion" >
+        				<div class="datosLogin">
+        					<br />
+        					Correo electronico
+        					<input type="email" name="emailLogin" class="txtLogin"/>
+        					<br />
+        					<input type="checkbox" name="chkRecordarLogin" value="No serrar sesion" />No cerrar sesion
+        				</div>
+        				<div class="datosLogin">
+        					<br />
+        					Contraseña
+        					<input type="password"  name="pasworLogin" class="txtLogin" />
+        					<a href="">Olvidaste tu contrasena?</a>
+        				</div>
+        				<div class="btnLogin">
+        					<br />
+        					<br />
+        					<input type="submit" name="btnLogin" value="Entrar" id="btnEntrar" />
+        				</div>
+        				</form>
+        			</div>
+        			{% endblock menuRightHead %}
+        			
+        		</div>
+        	{% endblock contenedorPrincipalHead %}
+        	
+<!-- Segunda parte para el contenedor secundario es el cuerpo principal -->
+		{% block contenedorCuerpo %}
+        	<div class="contedBody">   
+        		{% block contenedorPrincipalCuerpo %}
+        		<div class="sectionConted"> <!-- Contenedor padre de lo que es todo el cuerpo-->
+        			{% block banerIzCuerpo %}
+        			<div id="sectionContedLeft">
+        				<h2>Hola esto va a ser el titulo</h2>
+        				<h3>esto sera el subtitulo</h3>
+        				<div id="sliderContedSection">
+        					color naranja aparece
+        						<video  src="http://devfiles.myopera.com/articles/2642/sintel-trailer.ogv" id="videoSectionLeft" controls > </video>
+        				</div>
+   
+        			</div>
+        			{% endblock banerIzCuerpo %}
+        			{% block banerDerCuerpo %}
+        			<div id="sectionContedRight">
+						<p><h2>¿Eres profesor o Tienes hijios?</h2></p>
+						<h3>Registrate ahora mismo</h3>
+						<div>
+							<form>
+								<input type="text" name="nombre" placeholder="Nombre" class="registerEmailPass formRegistrar" />
+								<input type="text" name="ap_paterno" placeholder="Apellido Paterno" class="registername formRegistrar" />
+								<input type="text" name="ap_materno" placeholder="Apellido Materno" class="registerApe formRegistrar" />
+								<input type="email" name="email" placeholder="Correo electronico" class="registerEmailPass formRegistrar"/>
+								<input type="password" name="passwor" placeholder="Contrasena" class="registerEmailPass formRegistrar" />
+								<input type="password" name="passwor_1" placeholder="Escribe nuevamente la contrasena" class="registerEmailPass formRegistrar" />
+								<br><br>
+								<fieldset>
+									<input type="radio" name="sexo" value="Hombre" /> Hombre
+									<input type="radio" name="sexo" value="Mujer"  />Mujer 	
+								</fieldset>
+								<br>
+								<input type="submit" name="enviar" value="registrarse" />
+							</form><br>
+							<a href="#"> Terminos y condiciones</a>
+						</div>
+					</div>
+					{% endblock banerDerCuerpo %}
+        			
+					
+        		</div>
+        		{% endblock contenedorPrincipalCuerpo %}
+        	</div>
+        	{% endblock contenedorCuerpo %}
+       <!-- Tercer parte, es para el pie de pagina-->
+        	{% block pieDePagina %}
+        	<footer class="footerBody">
+        		{% block contenedorPieDePagina %} 
+        		<div class="sectionConted">
+        			{% block datosPiePagina %}
+        			  footer de la plantilla que usa a un archivo como base
+        			{% endblock datosPiePagina %}
+        		</div>
+        		{% endblock contenedorPieDePagina %}
+        	</footer>
+        	{% endblock pieDePagina %}
